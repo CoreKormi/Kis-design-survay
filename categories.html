@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Tags and defining features such as scaling -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Homework for KIS, Design class MYPD">
+    <meta name="author" content="Márk Köteles">
+
+    <!-- Title -->
+    <title>Guide to Kongsberg</title>
+
+    <!-- Importing Css file -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="places">
+
+    <!-- Define the site content -->
+
+    <!-- The sidebar with the search bar -->
+    <div id="sidebar">
+        <input id="search" class="black-border" placeholder="Search here..." type="text"/>
+        <div id="menu" class="black-border"></div>
+    </div>
+
+    <!-- Top menu, link to other parts of the website -->
+    <div id="content">
+        <div id="topmenu">
+            <a href="index.html" class="button black-border">Home</a>
+            <h1 style="margin: 0">Guide to Kongsberg</h1>
+            <a href="transport.html" class="button black-border">Transport</a>
+        </div>
+        <div id="category-description" class="black-border"></div>
+        <div id="places"></div>
+    </div>
+
+    <!-- Define the templates -->
+    <script id="menu-template" type="text/template">
+        <a href="#" class="category-menu button black-border" id="arial" >{{category}}</a>
+    </script>
+
+    <script id="place-template" type="text/template">
+        <div class="place black-border">
+            <img src="{{image}}">
+            <div class="info">
+                <h1 id="arial" class="selecting">
+                    <a href="{{link}}">{{name}}</a>
+                </h1>
+                <p id="times">{{description}}</p>
+            </div>
+        </div>
+    </script>
+
+    <!-- Importing the 2 scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
